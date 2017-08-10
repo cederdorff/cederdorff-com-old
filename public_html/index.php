@@ -21,7 +21,11 @@
         <p>Web Architect | Web &amp; App Developer</p>
         <p><a href="mailto:rasmus@cederdorff.com">rasmus@cederdorff.com</a></p>
         <p><a href="tel:+4531424089">+45 31 42 40 89</a></p>
-        <p><a href="https://www.facebook.com/cederdorff/" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a><a href="https://www.instagram.com/cederdorff/" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></p>
+        <p class="social-icons">
+          <a href="https://www.facebook.com/cederdorff/" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/cederdorff/" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/rasmus-cederdorff-a6ba9646/" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+        </p>
       </div>
     </div>
   </section>
@@ -46,7 +50,7 @@
       "addressCountry" : "Denmark",
       "addressLocality" : "Aarhus C",
       "postalCode" : "8000",
-      "streetAddress" : "Vestergade 81A, 3. tv"
+      "streetAddress" : "Vestergade 81A, 3. TV"
     },
     "numberOfEmployees" : 1,
     "vatID" : "DK35953981",

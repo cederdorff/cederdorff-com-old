@@ -7,6 +7,7 @@ html, body {
 body{
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
+  color: #fff;
 }
 h1{
   font-weight: 400;
@@ -17,7 +18,13 @@ header, section{
 }
 header{
   background: rgb(38, 76, 89) url('img/logo_inverted.png') no-repeat center center;
-  background-size: 35%;
+  background-size: 80%;
+}
+
+@media (min-width: 768px) {
+  header{
+    background-size: 35%;
+  }
 }
 section{
   background: rgb(172,198,201);
@@ -48,7 +55,7 @@ a:hover{
   opacity: 0.7;
 }
 
-a .fa-facebook{
+.social-icons a:not(:last-child){
   margin-right: 20px;
 }
 
