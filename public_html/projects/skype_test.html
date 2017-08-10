@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skype for Business | Test Call Page</title>
+    <style>
+      body{
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 200;
+      }
+      li{
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+    <h1>Skype for Business | Test Call Page</h1>
+    <ol>
+      <li><a href="skype:+4576945513?call">Skype Call 1: +4576945513</a></li>
+
+      <li><a href="skype:fknudsen@boumatic.com?call">Skype Call 2: fknudsen@boumatic.com</a></li>
+
+      <li><a href ="skype:fknudsen@boumatic.com?chat">Skype Call 3: fknudsen@boumatic.com (chat)</a></li>
+
+      <li><a href="tel:+4576945513">Skype Call 4: +4576945513</a></li>
+
+      <li><a href="tel:fknudsen@boumatic.com">Skype Call 5: fknudsen@boumatic.com</a></li>
+
+      <li><a href="callto:+4576945513">Skype Call 6: +4576945513</a></li>
+
+      <li><a href="callto:fknudsen@boumatic.com">Skype Call 7: fknudsen@boumatic.com</a></li>
+
+      <li><div id="SkypeButton_Call_1">
+       <script type="text/javascript">
+       Skype.ui({
+       "name": "call",
+       "element": "SkypeButton_Call_1",
+       "participants": ["fknudsen@boumatic.com"],
+       "imageSize":24
+       });
+       </script>
+      </div></li>
+
+      <li>
+        <div id="SkypeButton_Call_2">
+       <script type="text/javascript">
+       Skype.ui({
+       "name": "call",
+       "element": "SkypeButton_Call_2",
+       "participants": ["+4576945513"],
+       "imageSize":24
+       });
+       </script>
+      </div>
+    </li>
+
+    <li>
+      <div id="SkypeButton_Call_3">
+     <script type="text/javascript">
+     Skype.ui({
+     "name": "chat",
+     "element": "SkypeButton_Call_3",
+     "participants": ["fknudsen@boumatic.com"],
+     "imageSize":24
+     });
+     </script>
+    </div>
+  </li>
+
+    </ol>
+
+    <br>
+    <br>
+
+
+  </body>
+</html>

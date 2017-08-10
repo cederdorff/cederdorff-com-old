@@ -1,0 +1,34 @@
+{
+"@context" : "http://schema.org",
+"@type" : "Organization",
+"legalName" : "Cederdorff IT",
+"url" : "http://cederdorff.com",
+"contactPoint" : [{
+"@type" : "ContactPoint",
+"contactType" : "Main contact point",
+"telephone" : "+45 31 42 40 89",
+"email" : "it@cederdorff.com"
+}],
+"logo" : "http://cederdorff.com/img/logo_horisontal_slogan.png",
+"sameAs" : [ "http://www.facebook.com/cederdorffit", "https://www.linkedin.com/company/cederdorff-it","https://plus.google.com/101731878125000278815"],
+"email" : "it@cederdorff.com",
+"telephone" : "+45 31 42 40 89",
+"address":{
+"@type" : "PostalAddress",
+"addressCountry" : "Denmark",
+"addressLocality" : "Aarhus C",
+"postalCode" : "8000",
+"streetAddress" : "Vestergade 81A, 3. tv"
+},
+"numberOfEmployees" : 1,
+"vatID" : "DK35953981",
+"founder" : {
+"@type" : "Person",
+"familyName" : "Cederdorff",
+"givenName" : "Rasmus",
+"name" : "Rasmus Cederdorff",
+"email" : "rasmus@cederdorff.dk",
+"birthDate" : "1990-03-12"
+}
+
+}

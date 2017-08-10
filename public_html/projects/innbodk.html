@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cederdorff IT tilbyder webdesign, webshops, hjemmesider, programmering, layout, grafisk design, IT-support og undervisning til private og virksomheder.">
+  <meta name="author" content="Cederdorff IT, Rasmus Cederdorff">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <title>Cederdorff IT | Web og programmering - hjemmesider, webshops, apps, grafisk design og layout, IT-support og undervisning</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link href="/css/styles.css" rel="stylesheet"> -->
+</head>
+<body>
+<h1>DBA API</h1>
+
+<script src="/js/jquery.js"></script>
+<script>
+var url = "http://cederdorff.com/projects/innbodk.php";
+
+$.ajax({
+	url: url,
+	method: 'GET'
+}).done(function(data) {
+	console.log("All data:")
+	console.log(data);
+}).fail(function(err) {
+throw err;
+});
+</script>
+</body>
+
+</html>
