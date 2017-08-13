@@ -38,14 +38,16 @@
   <div class="container">
 
 
-    <h1>Hello, world!</h1>
+    <h1>Search Libraries</h1>
+    <br>
     <h3>Fuse.js</h3>
     <code id="fuseResultTextArea"></code>
+    <br><br>
     <h3>Lunr.js</h3>
     <code id="lunrResultTextArea"></code>
   </div>
   <!-- jQuery first, then Tether, then Bootstrap JS. -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" crossorigin="anonymous"></script>
@@ -221,23 +223,33 @@
       location: 0,
       distance: 100,
       maxPatternLength: 64,
-      minMatchCharLength: 1,
+      minMatchCharLength: 2,
       keys: [
-        "title"
+        "fuldNavn"
       ]
     };
-    var fuse = new Fuse(list, options);
+    var kunstnere = [];
+
+    var fuse;
+    $.getJSON("kunstnere.json", function(data) {
+      $.each(data, function(key, val) {
+        kunstnere.push(val);
+      });
+      console.log(kunstnere);
+      fuse= new Fuse(kunstnere, options);
+    });
+
+
 
     var lunr = lunr(function() {
-      this.ref('title');
-      this.field('title');
+      this.ref('fuldNavn');
+      this.field('fuldNavn');
       this.metadataWhitelist = ['position'];
 
-      list.forEach(function(doc) {
+      kunstnere.forEach(function(doc) {
         this.add(doc)
       }, this)
     });
-    console.log(lunr.search("red"));
 
 
     $("#searchField").keyup(function() {
