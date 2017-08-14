@@ -214,13 +214,19 @@
         }
       }
     ];
+    // var items = [];
+    // $.getJSON("data/test.json", function(data) {
+    //   $.each(data, function(key, val) {
+    //     items.push(val);
+    //   });
+    // });
 
     var options = {
       shouldSort: true,
-      threshold: 0.5,
+      threshold: 0.7,
       location: 0,
       distance: 100,
-      maxPatternLength: 64,
+      maxPatternLength: 32,
       minMatchCharLength: 1,
       keys: [
         "title"
@@ -237,8 +243,6 @@
         this.add(doc)
       }, this)
     });
-    console.log(lunr.search("red"));
-
 
     $("#searchField").keyup(function() {
       var searchString = $("#searchField").val();
