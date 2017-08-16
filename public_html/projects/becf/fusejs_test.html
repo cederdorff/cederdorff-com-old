@@ -216,10 +216,16 @@
         }
       }
     ];
+    // var items = [];
+    // $.getJSON("data/test.json", function(data) {
+    //   $.each(data, function(key, val) {
+    //     items.push(val);
+    //   });
+    // });
 
     var options = {
       shouldSort: true,
-      threshold: 0.5,
+      threshold: 0.7,
       location: 0,
       distance: 100,
       maxPatternLength: 64,
@@ -250,7 +256,6 @@
         this.add(doc)
       }, this)
     });
-
 
     $("#searchField").keyup(function() {
       var searchString = $("#searchField").val();
